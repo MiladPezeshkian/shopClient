@@ -101,7 +101,7 @@ const About = () => {
             <SwiperSlide>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
                 <img
-                  src="../../imgs/ourteam/tomcruise.png"
+                  src="../../imgs/ourteam/tomCruise.png"
                   alt="Tom Cruise"
                   className="mx-auto mb-4  w-[37rem] h-[43rem] object-cover"
                 />

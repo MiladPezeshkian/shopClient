@@ -39,7 +39,7 @@ const Login = () => {
           credentials: "include",
         }
       );
-      console.log(response);
+
       if (!response.ok) {
         const result = await response.json();
         throw new Error(result.message || "Login failed");
@@ -51,7 +51,6 @@ const Login = () => {
       // هدایت به صفحه اصلی پس از لاگین موفق
       navigate("/");
     } catch (err) {
-      console.log(err);
       setError(err.message || "Something went wrong.");
     } finally {
       setLoading(false);

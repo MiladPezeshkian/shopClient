@@ -8,7 +8,7 @@ import Spinner from "./components/Spinner/Spinner.jsx";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const CartList = lazy(() => import("./pages/CartList.jsx"));
-const About = lazy(() => import("./pages/About/About.jsx"));
+const About = lazy(() => import("./pages/About/About"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
 const Register = lazy(() => import("./pages/Register/Register"));
 const Login = lazy(() => import("./pages/login/Login.jsx"));

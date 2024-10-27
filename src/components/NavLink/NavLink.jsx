@@ -33,7 +33,7 @@ function NavLink() {
       const response = await fetch(
         "https://server-shop-p7jv.onrender.com/api/v1/auth/logout",
         {
-          method: "GET",
+          method: "PATCH",
           headers: {
             "Content-Type": "application/json",
           },

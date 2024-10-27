@@ -11,39 +11,39 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null); // وضعیت برای ذخیره خطا
 
   // فقط وقتی کاربر لاگین کرده وضعیت لاگین رو چک کن
-  // useEffect(() => {
-  //   // اگر لاگین نکرده بود، درخواست ارسال نکن
+  useEffect(() => {
+    // اگر لاگین نکرده بود، درخواست ارسال نکن
 
-  //   const checkLoginStatus = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         "https://server-shop-p7jv.onrender.com/api/v1/auth/islogin",
-  //         {
-  //           method: "GET", // نوع درخواست
-  //           credentials: "include", // برای ارسال کوکی‌ها (اگر نیاز دارید)
-  //         }
-  //       );
+    const checkLoginStatus = async () => {
+      try {
+        const response = await fetch(
+          "https://server-shop-p7jv.onrender.com/api/v1/auth/islogin",
+          {
+            method: "GET", // نوع درخواست
+            credentials: "include", // برای ارسال کوکی‌ها (اگر نیاز دارید)
+          }
+        );
 
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
 
-  //       const data = await response.json(); // تبدیل پاسخ به JSON
-  //       if (data.isAuthenticated) {
-  //         setIsLogin(true); // کاربر لاگین است
-  //       } else {
-  //         setIsLogin(false); // کاربر لاگین نیست
-  //         setError(null); // خطا را پاک کن
-  //       }
-  //     } catch (error) {
-  //       console.error("Error checking login status:", error);
-  //       setIsLogin(false); // فرض کنیم کاربر لاگین نیست
-  //       setError("Unable to check login status"); // خطا را ثبت کن
-  //     }
-  //   };
+        const data = await response.json(); // تبدیل پاسخ به JSON
+        if (data.isAuthenticated) {
+          setIsLogin(true); // کاربر لاگین است
+        } else {
+          setIsLogin(false); // کاربر لاگین نیست
+          setError(null); // خطا را پاک کن
+        }
+      } catch (error) {
+        console.error("Error checking login status:", error);
+        setIsLogin(false); // فرض کنیم کاربر لاگین نیست
+        setError("Unable to check login status"); // خطا را ثبت کن
+      }
+    };
 
-  //   checkLoginStatus(); // در صورتی که کاربر لاگین کرده، درخواست چک کردن ارسال بشه
-  // }, [isLogin]);
+    checkLoginStatus(); // در صورتی که کاربر لاگین کرده، درخواست چک کردن ارسال بشه
+  }, [isLogin]);
 
   // تابع ورود
   const login = () => {
