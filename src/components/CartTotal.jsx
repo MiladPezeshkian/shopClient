@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useCartWishlist } from "../hook/useCartWishlist";
+import { useCartWishlist } from "../hook/useCartWishlist ";
 
 function CartTotal() {
   const navigate = useNavigate();
