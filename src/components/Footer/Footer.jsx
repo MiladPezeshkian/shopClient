@@ -19,7 +19,7 @@ function Footer() {
           <div className="bg-slate-800 rounded-lg p-[1rem] flex items-center space-x-3">
             <Link to={"/"}>
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Bazaarok Logo"
                 className="w-12 h-12 transition-transform duration-300 ease-in-out hover:scale-110 rounded-full"
               />
