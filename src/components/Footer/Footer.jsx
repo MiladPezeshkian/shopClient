@@ -16,13 +16,24 @@ function Footer() {
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 px-6 md:px-12">
         {/* Logo and Description */}
         <div>
-          <div className="bg-slate-800 rounded-lg p-[1rem]">
+          <div className="bg-slate-800 rounded-lg p-[1rem] flex items-center space-x-3">
             <Link to={"/"}>
               <img
-                src="/logo.webp"
+                src="/logo.png"
                 alt="Bazaarok Logo"
-                className="w-32 h-auto transition-all duration-300 ease-in-out hover:scale-105"
+                className="w-12 h-12 transition-transform duration-300 ease-in-out hover:scale-110"
               />
+            </Link>
+            <Link to={"/"}>
+              <h1
+                className="md:text-4xl font-extrabold text-2xl bg-gradient-to-r from-red-500 via-white to-green-500 bg-clip-text text-transparent shadow-lg shadow-green-400/50 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-red-400/50"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to right, red 25%, white 40%, yellow 55%, green 100%)",
+                }}
+              >
+                Bazaarok
+              </h1>
             </Link>
           </div>
           <p className="text-lg mt-2">Best deals on all products</p>
