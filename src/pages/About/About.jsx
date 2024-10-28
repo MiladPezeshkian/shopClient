@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper/modules"; // تغییر مسیر برای نسخه جدید
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
