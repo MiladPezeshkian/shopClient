@@ -25,7 +25,7 @@ const About = () => {
                 Our Story
               </h1>
               <p className="text-lg mb-4">
-                Launched in 2015, Exclusive is South Asia's premier online
+                Launched in 2015, Exclusive is South Asia&apos;s premier online
                 shopping marketplace with an active presence in Bangladesh.
                 Supported by a wide range of tailored marketing, data, and
                 service solutions, Exclusive has 10,500 sellers and 300 brands
