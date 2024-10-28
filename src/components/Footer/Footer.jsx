@@ -21,7 +21,7 @@ function Footer() {
               <img
                 src="/logo.png"
                 alt="Bazaarok Logo"
-                className="w-12 h-12 transition-transform duration-300 ease-in-out hover:scale-110"
+                className="w-12 h-12 transition-transform duration-300 ease-in-out hover:scale-110 rounded-full"
               />
             </Link>
             <Link to={"/"}>
