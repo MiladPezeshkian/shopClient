@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
 
 function Tittle({ name }) {
-  // Destructure props
   return (
-    <div className="flex justify-start items-center gap-[2rem] w-[90%] ml-[2rem] md:my-[2rem] my-[4rem]">
-      <div className="w-[2rem] h-[4rem] bg-[#DB4444]"></div>
+    <div className="flex justify-start items-center gap-8 w-full max-w-full ml-8 md:my-8 my-16 overflow-hidden">
+      <div className="w-8 h-16 bg-[#DB4444]"></div>
       <p className="font-semibold text-[1.6rem] font-[poppins]">{name}</p>
     </div>
   );

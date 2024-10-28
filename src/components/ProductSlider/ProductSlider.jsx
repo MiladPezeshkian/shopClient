@@ -4,7 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Spinner from "../Spinner/Spinner"; // Import the Spinner component
+
 const serverUrl = "https://server-shop-p7jv.onrender.com";
+
 const ProductSlider = ({ products, isLoading }) => {
   const settings = {
     dots: true,
@@ -12,12 +14,13 @@ const ProductSlider = ({ products, isLoading }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true, // فعال‌سازی تغییر خودکار
+    autoplaySpeed: 4000, // تنظیم سرعت به ۴۰۰۰ میلی‌ثانیه (۴ ثانیه)
   };
 
   return (
     <div className="relative w-full mx-auto p-4 h-[40rem]">
-      {/* Use the Spinner component here */}
-
+      {/* نمایش Spinner در صورت loading */}
       {isLoading && <Spinner />}
       <div
         className={`transition-opacity duration-500 ${
@@ -28,9 +31,9 @@ const ProductSlider = ({ products, isLoading }) => {
           {products.map((product, index) => (
             <div
               key={index}
-              className=" relative md:p-[2.5rem] flex flex-col md:flex-row-reverse items-center md:h-[34.4rem]  justify-between w-full bg-white text-black border-y-2"
+              className="relative md:p-[2.5rem] flex flex-col md:flex-row-reverse items-center md:h-[34.4rem] justify-between w-full bg-white text-black border-y-2"
             >
-              <h1 className=" text-[2rem] text-red-600  line-clamp-4 text-pretty font-semibold">
+              <h1 className="text-[2rem] text-red-600 line-clamp-4 text-pretty font-semibold">
                 New Five Products
               </h1>
               <div className="w-full md:w-1/2 flex justify-center md:absolute right-0">
@@ -62,16 +65,17 @@ const ProductSlider = ({ products, isLoading }) => {
     </div>
   );
 };
+
 ProductSlider.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       category: PropTypes.string.isRequired,
-      _id: PropTypes.string.isRequired, // قبول هر دو نوع id
+      _id: PropTypes.string.isRequired,
     })
   ).isRequired,
-  isLoading: PropTypes.bool.isRequired, // prop برای وضعیت loading
+  isLoading: PropTypes.bool.isRequired,
 };
 
 export default ProductSlider;
