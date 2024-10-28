@@ -20,13 +20,19 @@ function Home() {
   }, [allProducts]);
 
   return (
-    <div className="min-h-screen flex flex-col justify-between">
-      <header>
+    <div className="min-h-screen flex flex-col justify-between overflow-x-hidden">
+      {" "}
+      {/* اضافه کردن overflow-x-hidden برای کل صفحه */}
+      <header className="overflow-x-hidden">
+        {" "}
+        {/* اضافه کردن overflow-x-hidden به header */}
         <NavLink />
         <ProductSlider products={products} isLoading={isLoading} />
       </header>
-      <main>
-        <div>
+      <main className="overflow-x-hidden">
+        {" "}
+        {/* اضافه کردن overflow-x-hidden به main */}
+        <div className="container mx-auto px-4">
           <Tittle name="Our Products" />
           <Products products={allProducts} />
           <Tittle name="Filter By Categories" />
@@ -42,7 +48,9 @@ function Home() {
         <Tittle name="Services" />
         <Services />
       </main>
-      <footer>
+      <footer className="overflow-x-hidden">
+        {" "}
+        {/* اضافه کردن overflow-x-hidden به footer */}
         <Footer />
       </footer>
     </div>

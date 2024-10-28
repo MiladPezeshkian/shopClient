@@ -63,19 +63,20 @@ function NavLink() {
       <nav
         className={`${style.navbar} flex items-center justify-between p-4 w-full`}
       >
-        <div className="bg-slate-800 rounded-lg p-[1rem]">
-          <h1
-            className="md:text-4xl font-extrabold text-2xl bg-black bg-gradient-to-r from-red-500 via-white to-green-500 bg-clip-text text-transparent 
-          shadow-lg shadow-green-400/50 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-red-400/50"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, red 25%, white 40%, yellow 55%, green 100%)",
-            }}
-          >
-            KurdShop
-          </h1>
-        </div>
-
+        <Link to="/">
+          <div className="bg-slate-800 rounded-lg p-[1rem]">
+            <h1
+              className="md:text-4xl font-extrabold text-2xl bg-black bg-gradient-to-r from-red-500 via-white to-green-500 bg-clip-text text-transparent 
+            shadow-lg shadow-green-400/50 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-red-400/50"
+              style={{
+                backgroundImage:
+                  "linear-gradient(to right, red 25%, white 40%, yellow 55%, green 100%)",
+              }}
+            >
+              Bazaarok
+            </h1>
+          </div>
+        </Link>
         <div className="hidden md:flex gap-10">
           <Link className={style.links} to="/">
             Home
