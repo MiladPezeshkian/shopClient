@@ -17,18 +17,15 @@ function Footer() {
         {/* Logo and Description */}
         <div>
           <div className="bg-slate-800 rounded-lg p-[1rem]">
-            <h1
-              className="md:text-4xl font-extrabold text-2xl bg-black bg-gradient-to-r from-red-500 via-white to-green-500 bg-clip-text text-transparent 
-          shadow-lg shadow-green-400/50 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-red-400/50"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to right, red 25%, white 40%, yellow 55%, green 100%)",
-              }}
-            >
-              KurdShop
-            </h1>
+            <Link to={"/"}>
+              <img
+                src="/logo.webp"
+                alt="Bazaarok Logo"
+                className="w-32 h-auto transition-all duration-300 ease-in-out hover:scale-105"
+              />
+            </Link>
           </div>
-          <p className="text-lg">Best deals on all products</p>
+          <p className="text-lg mt-2">Best deals on all products</p>
         </div>
 
         {/* Navigation Links (Example Sections) */}
